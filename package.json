@@ -1,0 +1,24 @@
+{
+  "name": "my-personal-website",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently -n css,server -c cyan,green \"npm:watch:css\" \"npm:serve\"",
+    "watch:css": "tailwindcss -i ./src/css/input.css -o ./assets/css/style.css --watch",
+    "build": "tailwindcss -i ./src/css/input.css -o ./assets/css/style.css --minify",
+    "serve": "live-server --port=5500 --no-browser --ignore=src,node_modules",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Personal portfolio website — HTML5, Tailwind CSS & vanilla JavaScript",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "concurrently": "^10.0.6",
+    "live-server": "^1.2.2",
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3"
+  },
+  "private": true
+}

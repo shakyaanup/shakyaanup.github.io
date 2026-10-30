@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anup Shakya — Web Developer</title>
+    <meta
+      name="description"
+      content="Anup Shakya is a web developer in Portugal with 10+ years of experience building fast, responsive, pixel-perfect websites."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+    <!-- Fonts: Bricolage Grotesque (display) + Poppins (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Poppins:wght@300;400;500;600&display=swap"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/main.js" defer></script>
+  </head>
+
+  <body class="bg-ink font-sans text-white antialiased">
+    <a
+      href="#main"
+      class="sr-only z-[60] rounded-full bg-purple px-4 py-2 focus:not-sr-only focus:fixed focus:top-4 focus:left-4"
+      >Skip to main content</a
+    >
+
+    <!-- ============================== HEADER ============================== -->
+    <header id="site-header" class="site-header fixed inset-x-0 top-0 z-50">
+      <div class="px-4 pt-3 sm:px-6 lg:px-10 lg:pt-4">
+        <div
+          class="nav-bar grid min-h-16 grid-cols-[1fr_auto] items-center gap-3 rounded-full px-2 sm:px-3 md:grid-cols-[1fr_auto_1fr]"
+        >
+          <!-- Menu toggle -->
+          <button
+            id="menu-toggle"
+            type="button"
+            class="group flex h-11 w-14 items-center justify-center justify-self-start rounded-full bg-white/10 transition hover:bg-white/20 in-[.menu-open]:bg-purple in-[.menu-open]:hover:bg-purple-hover max-md:order-last max-md:justify-self-end"
+            aria-expanded="false"
+            aria-controls="site-menu"
+            aria-label="Open menu"
+          >
+            <span class="relative block h-2.5 w-7" aria-hidden="true">
+              <span class="menu-line"></span>
+              <span class="menu-line"></span>
+            </span>
+          </button>
+
+          <!-- Logo -->
+          <a
+            href="#home"
+            class="group inline-flex items-center gap-2.5 max-md:pl-2 md:justify-self-center"
+            aria-label="Anup Shakya — home"
+          >
+            <svg
+              class="h-8 w-8 text-white transition duration-500 group-hover:rotate-[-12deg] group-hover:text-purple-light"
+              viewBox="17 0 304 304"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M310 146A145.5 145.5 0 1 0 249.6 264C262 270 290 282 313 301.5Q319.5 303 318.5 294C316 255 310 215 310 146ZM164.5 74A73.5 73.5 0 1 0 164.5 221A73.5 73.5 0 1 0 164.5 74Z"
+              />
+            </svg>
+            <span class="font-display text-xl font-bold tracking-tight">anup<span class="text-purple-light">.</span></span>
+          </a>
+
+          <!-- CTA -->
+          <a
+            href="#contact"
+            class="group inline-flex items-center gap-2 justify-self-end rounded-full bg-white py-1 pr-1 pl-5 text-sm font-medium text-ink transition hover:bg-white/85 max-md:hidden"
+          >
+            Let's talk
+            <span class="cta-arrow flex h-9 w-9 items-center justify-center rounded-full bg-purple text-white">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================== MENU ============================== -->
+    <div
+      id="site-menu"
+      class="menu-panel fixed inset-0 z-40 overflow-y-auto bg-surface"
+      aria-hidden="true"
+    >
+      <div class="grid-mesh opacity-60" aria-hidden="true"></div>
+      <div
+        class="glow -bottom-40 -left-40 h-[36rem] w-[36rem] bg-[radial-gradient(circle,rgb(116_59_255/0.35),transparent_68%)]"
+        aria-hidden="true"
+      ></div>
+
+      <div
+        class="relative mx-auto flex min-h-full max-w-7xl flex-col justify-between gap-12 px-6 pt-32 pb-10 lg:flex-row lg:items-end lg:px-10"
+      >
+        <nav aria-label="Main">
+          <ul class="space-y-1">
+            <li class="menu-item" style="--i: 0"><a href="#home" class="menu-link group flex items-baseline gap-4 font-display text-5xl font-extrabold tracking-[-0.01em] transition hover:text-purple-light sm:text-7xl"><span class="font-sans text-sm font-normal text-muted">01</span>About</a></li>
+            <li class="menu-item" style="--i: 1"><a href="#work" class="menu-link group flex items-baseline gap-4 font-display text-5xl font-extrabold tracking-[-0.01em] transition hover:text-purple-light sm:text-7xl"><span class="font-sans text-sm font-normal text-muted">02</span>Work</a></li>
+            <li class="menu-item" style="--i: 2"><a href="#services" class="menu-link group flex items-baseline gap-4 font-display text-5xl font-extrabold tracking-[-0.01em] transition hover:text-purple-light sm:text-7xl"><span class="font-sans text-sm font-normal text-muted">03</span>Services</a></li>
+            <li class="menu-item" style="--i: 3"><a href="#experience" class="menu-link group flex items-baseline gap-4 font-display text-5xl font-extrabold tracking-[-0.01em] transition hover:text-purple-light sm:text-7xl"><span class="font-sans text-sm font-normal text-muted">04</span>Experience</a></li>
+            <li class="menu-item" style="--i: 4"><a href="#contact" class="menu-link group flex items-baseline gap-4 font-display text-5xl font-extrabold tracking-[-0.01em] transition hover:text-purple-light sm:text-7xl"><span class="font-sans text-sm font-normal text-muted">05</span>Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="menu-item space-y-6 text-sm lg:text-right" style="--i: 5">
+          <div>
+            <p class="mb-2 text-xs tracking-[0.2em] text-muted uppercase">Say hello</p>
+            <a href="mailto:anup.shakya60@gmail.com" class="font-display text-2xl font-semibold transition hover:text-purple-light">anup.shakya60@gmail.com</a>
+          </div>
+          <div>
+            <p class="mb-2 text-xs tracking-[0.2em] text-muted uppercase">Based in</p>
+            <p>Portugal</p>
+          </div>
+          <div>
+            <p class="mb-2 text-xs tracking-[0.2em] text-muted uppercase">Follow</p>
+            <ul class="flex gap-5 lg:justify-end">
+              <li><a href="https://www.linkedin.com/in/anup-shakya-89442b80/" target="_blank" rel="noopener" class="transition hover:text-purple-light">LinkedIn</a></li>
+              <li><a href="https://github.com/shakyaanup" target="_blank" rel="noopener" class="transition hover:text-purple-light">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ============================== HERO ============================== -->
+      <section
+        id="home"
+        class="hero relative isolate flex min-h-dvh flex-col overflow-clip bg-ink"
+        aria-labelledby="hero-title"
+      >
+        <!-- Background layers -->
+        <div class="grid-mesh" aria-hidden="true"></div>
+        <div class="grid-mesh grid-spotlight" aria-hidden="true"></div>
+        <div
+          class="glow -top-40 -right-32 h-[46rem] w-[46rem] max-w-[90vw] bg-[radial-gradient(circle,rgb(116_59_255/0.32),transparent_68%)]"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="glow top-1/3 -left-60 h-[30rem] w-[30rem] bg-[radial-gradient(circle,rgb(144_98_255/0.14),transparent_70%)] [animation-delay:-7s]"
+          aria-hidden="true"
+        ></div>
+        <div class="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-ink" aria-hidden="true"></div>
+
+        <!-- Copy -->
+        <div class="relative flex flex-1 flex-col items-center justify-end px-5 pt-36 pb-10 text-center sm:px-8 lg:pt-40">
+          <p
+            class="enter mb-7 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 py-1.5 pr-4 pl-3 text-xs text-white/80 backdrop-blur sm:text-sm"
+          >
+            <span class="pulse-dot relative h-2 w-2 rounded-full bg-lime"></span>
+            Available for freelance &amp; full-time work
+          </p>
+
+          <h1
+            id="hero-title"
+            class="enter enter-d1 mx-auto max-w-[16ch] font-display text-hero leading-[1.04] font-bold tracking-normal text-balance"
+          >
+            Building websites
+            <span class="text-purple-light">people remember</span>
+          </h1>
+
+          <p class="enter enter-d2 mx-auto mt-6 max-w-2xl text-lead leading-relaxed text-balance text-muted">
+            Hi, I'm <strong class="font-medium text-white">Anup Shakya</strong> — a web developer in Portugal with
+            <strong class="font-medium text-white">10+ years</strong> of experience turning designs into fast,
+            responsive and pixel-perfect websites for agencies, startups and businesses worldwide.
+          </p>
+
+          <div class="enter enter-d3 mt-9 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="#work"
+              class="group inline-flex items-center gap-3 rounded-full bg-purple py-1.5 pr-1.5 pl-6 font-medium transition hover:bg-purple-hover hover:shadow-[0_10px_40px_-10px_rgb(116_59_255/0.9)]"
+            >
+              View my work
+              <span class="cta-arrow flex h-10 w-10 items-center justify-center rounded-full bg-white text-purple">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </span>
+            </a>
+            <a
+              href="assets/docs/Anup-Shakya-CV.pdf"
+              class="inline-flex items-center gap-2 rounded-full border border-white/15 px-6 py-3.5 font-medium transition hover:border-white/40 hover:bg-white/5"
+              download
+            >
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 4v12m0 0-5-5m5 5 5-5M5 20h14" />
+              </svg>
+              Download CV
+            </a>
+          </div>
+        </div>
+
+        <!-- Skills carousel -->
+        <div class="enter enter-d4 relative">
+          <div class="mx-auto w-full max-w-[35rem]">
+            <div class="skills-window" role="group" aria-label="What I do">
+              <div id="skills-track" class="skills-track"></div>
+            </div>
+          </div>
+
+          <!-- Tools marquee -->
+          <div class="flex flex-col items-center gap-4 pt-10 pb-10">
+            <p class="text-[0.7rem] tracking-[0.25em] text-muted uppercase">Tools I work with</p>
+            <div class="marquee w-full max-w-4xl overflow-hidden">
+              <ul
+                id="tools-track"
+                class="marquee-track flex w-max font-display text-lg font-semibold text-white/40 sm:text-xl"
+                aria-label="Tools"
+              ></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== WORK ============================== -->
+      <section id="work" class="relative scroll-mt-8 bg-ink py-24 sm:py-32" aria-labelledby="work-title">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <!-- Heading -->
+          <div class="mb-14 flex flex-col gap-8 lg:mb-20 lg:flex-row lg:items-end lg:justify-between">
+            <div data-reveal>
+              <p class="mb-5 flex items-center gap-3 text-xs tracking-[0.25em] text-muted uppercase">
+                <span class="h-px w-8 bg-purple-light"></span>
+                Selected work
+                <span id="project-count" class="text-purple-light"></span>
+              </p>
+              <h2 id="work-title" class="font-display text-5xl leading-[1.04] font-bold sm:text-6xl lg:text-7xl">
+                Things I've <span class="text-purple-light">built</span>
+              </h2>
+            </div>
+            <div class="max-w-md space-y-5 lg:text-right" data-reveal style="--reveal-delay: 0.1s">
+              <p class="leading-relaxed text-muted">
+                A collection of real, working products — designed, coded and shipped with attention to
+                detail, performance and accessibility.
+              </p>
+              <a
+                href="https://github.com/shakyaanup"
+                target="_blank"
+                rel="noopener"
+                class="group inline-flex items-center gap-2 text-sm font-medium text-white transition hover:text-purple-light"
+              >
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                More on GitHub
+                <svg class="h-4 w-4 transition group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project slider (slides rendered from PROJECTS in assets/js/main.js) -->
+          <div id="project-slider" class="project-slider" role="region" aria-roledescription="carousel" aria-label="Projects" data-reveal>
+            <div
+              id="project-track"
+              class="flex snap-x snap-mandatory gap-6 overflow-x-auto overscroll-x-contain [scrollbar-width:none] lg:gap-8 [&::-webkit-scrollbar]:hidden"
+              tabindex="0"
+            ></div>
+
+            <!-- Controls -->
+            <div class="mt-8 flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+              <ol id="project-tabs" class="flex flex-1 gap-3 sm:max-w-2xl" aria-label="Choose project"></ol>
+              <div class="flex items-center gap-4 self-end sm:self-auto">
+                <p class="font-display text-lg font-semibold tabular-nums" aria-live="polite">
+                  <span id="project-current" class="text-white">01</span>
+                  <span class="text-white/30">/ <span id="project-total">01</span></span>
+                </p>
+                <button id="project-prev" type="button" class="slider-btn" aria-label="Previous project">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+                </button>
+                <button id="project-next" type="button" class="slider-btn" aria-label="Next project">
+                  <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- More coming -->
+          <div
+            class="mt-16 flex flex-col items-start justify-between gap-6 rounded-[2rem] border border-dashed border-white/15 p-8 sm:flex-row sm:items-center lg:px-12"
+            data-reveal
+          >
+            <div class="flex items-center gap-5">
+              <span class="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-purple/15 text-purple-light">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1" /></svg>
+              </span>
+              <div>
+                <p class="font-display text-xl font-semibold">More projects on the way</p>
+                <p class="text-sm text-muted">Currently building — have something in mind? Let's make it together.</p>
+              </div>
+            </div>
+            <a
+              href="#contact"
+              class="group inline-flex shrink-0 items-center gap-2 rounded-full bg-white py-1 pr-1 pl-5 text-sm font-medium text-ink transition hover:bg-white/85"
+            >
+              Start a project
+              <span class="cta-arrow flex h-9 w-9 items-center justify-center rounded-full bg-purple text-white">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== SERVICES ============================== -->
+      <section id="services" class="relative scroll-mt-8 overflow-hidden border-t border-line bg-surface py-24 sm:py-32" aria-labelledby="services-title">
+        <div class="grid-mesh opacity-50 [mask-image:linear-gradient(to_bottom,black,transparent_40%)]" aria-hidden="true"></div>
+        <div class="glow -top-48 -right-40 h-[36rem] w-[36rem] bg-[radial-gradient(circle,rgb(116_59_255/0.22),transparent_68%)]" aria-hidden="true"></div>
+
+        <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="grid gap-14 lg:grid-cols-[1fr_1.45fr] lg:gap-20">
+            <!-- Intro (sticky on desktop) -->
+            <div class="lg:sticky lg:top-32 lg:self-start" data-reveal>
+              <p class="mb-5 flex items-center gap-3 text-xs tracking-[0.25em] text-muted uppercase">
+                <span class="h-px w-8 bg-purple-light"></span>
+                Services
+                <span id="service-count" class="text-purple-light"></span>
+              </p>
+              <h2 id="services-title" class="font-display text-5xl leading-[1.04] font-bold sm:text-6xl lg:text-7xl">
+                How I can <span class="text-purple-light">help</span>
+              </h2>
+              <p class="mt-6 max-w-md leading-relaxed text-muted">
+                Whether you need a marketing site, an online store or a polished UI for your product, I turn designs into
+                fast, accessible and pixel-perfect websites — and make sure they're easy for you to manage.
+              </p>
+
+              <dl class="mt-10 grid max-w-sm grid-cols-2 gap-6 border-t border-white/10 pt-8">
+                <div>
+                  <dt class="text-xs tracking-[0.15em] text-muted uppercase">Experience</dt>
+                  <dd class="mt-1 font-display text-4xl font-bold">10<span class="text-purple-light">+</span> <span class="text-base font-medium text-muted">yrs</span></dd>
+                </div>
+                <div>
+                  <dt class="text-xs tracking-[0.15em] text-muted uppercase">Freelance sites</dt>
+                  <dd class="mt-1 font-display text-4xl font-bold">10<span class="text-purple-light">+</span> <span class="text-base font-medium text-muted">live</span></dd>
+                </div>
+              </dl>
+
+              <a
+                href="#contact"
+                class="group mt-10 inline-flex items-center gap-3 rounded-full bg-purple py-1.5 pr-1.5 pl-6 font-medium transition hover:bg-purple-hover hover:shadow-[0_10px_40px_-10px_rgb(116_59_255/0.9)]"
+              >
+                Start a project
+                <span class="cta-arrow flex h-10 w-10 items-center justify-center rounded-full bg-white text-purple">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                </span>
+              </a>
+            </div>
+
+            <!-- Services accordion (rendered from SERVICES in assets/js/main.js) -->
+            <ul id="services-list" class="border-b border-white/10" data-reveal style="--reveal-delay: 0.1s"></ul>
+          </div>
+
+          <!-- Process -->
+          <div class="mt-24 lg:mt-32">
+            <h3 class="mb-10 font-display text-2xl font-semibold sm:text-3xl" data-reveal>
+              How we'll work <span class="text-purple-light">together</span>
+            </h3>
+            <ol id="process-list" class="process grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6"></ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== EXPERIENCE ============================== -->
+      <section id="experience" class="relative scroll-mt-8 overflow-hidden border-t border-line bg-ink py-24 sm:py-32" aria-labelledby="experience-title">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+          <div class="mb-14 flex flex-col gap-8 lg:mb-20 lg:flex-row lg:items-end lg:justify-between">
+            <div data-reveal>
+              <p class="mb-5 flex items-center gap-3 text-xs tracking-[0.25em] text-muted uppercase">
+                <span class="h-px w-8 bg-purple-light"></span>
+                Experience
+                <span class="text-purple-light">(10+ yrs)</span>
+              </p>
+              <h2 id="experience-title" class="font-display text-5xl leading-[1.04] font-bold sm:text-6xl lg:text-7xl">
+                Where I've <span class="text-purple-light">worked</span>
+              </h2>
+              <p class="mt-6 max-w-xl leading-relaxed text-muted">
+                Over a decade of building for the web — from hand-coded Photoshop layouts in Kathmandu to React
+                apps, Webflow sites and Shopify stores for teams across Europe and the US.
+              </p>
+            </div>
+            <div class="flex items-center gap-4" data-reveal style="--reveal-delay: 0.1s">
+              <a href="assets/docs/Anup-Shakya-CV.pdf" download class="mr-2 text-sm font-medium underline decoration-white/30 underline-offset-4 transition hover:text-purple-light hover:decoration-purple-light">Full CV</a>
+              <button id="timeline-prev" type="button" class="slider-btn" aria-label="Scroll timeline back">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6" /></svg>
+              </button>
+              <button id="timeline-next" type="button" class="slider-btn" aria-label="Scroll timeline forward">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline (rendered from EXPERIENCE in assets/js/main.js) -->
+        <ol
+          id="timeline"
+          class="timeline flex cursor-grab snap-x overflow-x-auto pb-4 [scrollbar-width:none] active:cursor-grabbing [&::-webkit-scrollbar]:hidden"
+          aria-label="Work history, most recent first"
+        ></ol>
+      </section>
+
+      <!-- ============================== CONTACT ============================== -->
+      <section id="contact" class="relative scroll-mt-8 overflow-hidden border-t border-line bg-surface py-24 sm:py-32" aria-labelledby="contact-title">
+        <div class="grid-mesh opacity-60" aria-hidden="true"></div>
+        <div class="glow -bottom-56 -left-40 h-[40rem] w-[40rem] bg-[radial-gradient(circle,rgb(116_59_255/0.28),transparent_68%)]" aria-hidden="true"></div>
+
+        <div class="relative mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1.15fr] lg:gap-20 lg:px-10">
+          <!-- Intro -->
+          <div data-reveal>
+            <p class="mb-5 flex items-center gap-3 text-xs tracking-[0.25em] text-muted uppercase">
+              <span class="h-px w-8 bg-purple-light"></span>
+              Contact
+            </p>
+            <h2 id="contact-title" class="font-display text-5xl leading-[1.04] font-bold sm:text-6xl lg:text-7xl">
+              Let's build something <span class="text-purple-light">great</span>
+            </h2>
+            <p class="mt-6 max-w-md leading-relaxed text-muted">
+              Have a project in mind, a role to fill, or just want to say hi? Send me a message and I'll get back to you
+              within a day.
+            </p>
+
+            <div class="mt-10 space-y-8">
+              <div>
+                <p class="mb-2 text-xs tracking-[0.2em] text-muted uppercase">Email</p>
+                <div class="flex flex-wrap items-center gap-3">
+                  <a href="mailto:anup.shakya60@gmail.com" class="font-display text-xl font-semibold transition hover:text-purple-light sm:text-2xl">anup.shakya60@gmail.com</a>
+                  <button id="copy-email" type="button" class="rounded-full border border-white/15 px-3 py-1 text-xs text-white/80 transition hover:border-white/40 hover:bg-white/5" data-email="anup.shakya60@gmail.com">
+                    Copy
+                  </button>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-6 sm:max-w-sm">
+                <div>
+                  <p class="mb-2 text-xs tracking-[0.2em] text-muted uppercase">Based in</p>
+                  <p>Portugal</p>
+                </div>
+                <div>
+                  <p class="mb-2 text-xs tracking-[0.2em] text-muted uppercase">Status</p>
+                  <p class="flex items-center gap-2"><span class="pulse-dot relative h-2 w-2 rounded-full bg-lime"></span> Available</p>
+                </div>
+              </div>
+              <div>
+                <p class="mb-3 text-xs tracking-[0.2em] text-muted uppercase">Elsewhere</p>
+                <ul class="flex gap-3">
+                  <li>
+                    <a href="https://www.linkedin.com/in/anup-shakya-89442b80/" target="_blank" rel="noopener" class="grid h-12 w-12 place-items-center rounded-full border border-white/15 transition hover:border-purple hover:bg-purple" aria-label="LinkedIn (opens in new tab)">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3v-11zm6.5 0h3.8v1.5h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11z"/></svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/shakyaanup" target="_blank" rel="noopener" class="grid h-12 w-12 place-items-center rounded-full border border-white/15 transition hover:border-purple hover:bg-purple" aria-label="GitHub (opens in new tab)">
+                      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="relative" data-reveal style="--reveal-delay: 0.1s">
+            <form
+              id="contact-form"
+              class="rounded-[2rem] border border-white/10 bg-ink/70 p-6 backdrop-blur-xl sm:p-10"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              novalidate
+            >
+              <!-- Web3Forms: paste your access key from https://web3forms.com here -->
+              <input type="hidden" name="access_key" value="627eff3c-3e35-4913-bf61-278ee46b9b38" />
+              <input type="hidden" name="subject" value="New message from your portfolio" />
+              <input type="hidden" name="from_name" value="Portfolio contact form" />
+              <!-- Honeypot: real people never tick this -->
+              <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <div class="grid gap-6 sm:grid-cols-2">
+                <div class="field">
+                  <label for="cf-name" class="field-label">Name <span class="text-purple-light" aria-hidden="true">*</span></label>
+                  <input id="cf-name" name="name" type="text" class="field-input" autocomplete="name" placeholder="Jane Doe" required aria-describedby="cf-name-error" />
+                  <p id="cf-name-error" class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="cf-email" class="field-label">Email <span class="text-purple-light" aria-hidden="true">*</span></label>
+                  <input id="cf-email" name="email" type="email" class="field-input" autocomplete="email" placeholder="jane@company.com" required aria-describedby="cf-email-error" />
+                  <p id="cf-email-error" class="field-error" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <fieldset class="mt-6">
+                <legend class="field-label">What do you need? <span class="font-normal text-muted">(optional)</span></legend>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <label class="chip"><input type="checkbox" name="services" value="Website" class="sr-only" /><span>Website</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="Webflow" class="sr-only" /><span>Webflow</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="Shopify" class="sr-only" /><span>Shopify</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="React / UI" class="sr-only" /><span>React / UI</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="WordPress" class="sr-only" /><span>WordPress</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="Full-time role" class="sr-only" /><span>Full-time role</span></label>
+                </div>
+              </fieldset>
+
+              <div class="field mt-6">
+                <label for="cf-message" class="field-label">Message <span class="text-purple-light" aria-hidden="true">*</span></label>
+                <textarea id="cf-message" name="message" rows="5" class="field-input resize-y" placeholder="Tell me a little about your project…" required aria-describedby="cf-message-error"></textarea>
+                <p id="cf-message-error" class="field-error" aria-live="polite"></p>
+              </div>
+
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-xs text-muted"><span class="text-purple-light">*</span> Required fields</p>
+                <button
+                  id="cf-submit"
+                  type="submit"
+                  class="group inline-flex items-center justify-center gap-3 rounded-full bg-purple py-1.5 pr-1.5 pl-6 font-medium transition hover:bg-purple-hover hover:shadow-[0_10px_40px_-10px_rgb(116_59_255/0.9)] disabled:cursor-wait disabled:opacity-70"
+                >
+                  <span id="cf-submit-label">Send message</span>
+                  <span class="cta-arrow flex h-10 w-10 items-center justify-center rounded-full bg-white text-purple">
+                    <svg class="cf-icon-send h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                    <svg class="cf-icon-spin hidden h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-opacity="0.25" stroke-width="3"/><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+                  </span>
+                </button>
+              </div>
+
+              <p id="cf-status" class="mt-5 hidden rounded-2xl border border-danger/30 bg-danger/10 px-4 py-3 text-sm text-danger" role="alert"></p>
+            </form>
+
+            <!-- Success state -->
+            <div
+              id="cf-success"
+              class="absolute inset-0 hidden flex-col items-center justify-center rounded-[2rem] border border-white/10 bg-ink/95 p-10 text-center backdrop-blur-xl"
+              role="status"
+              tabindex="-1"
+            >
+              <span class="success-check grid h-20 w-20 place-items-center rounded-full bg-gradient-to-br from-purple-light to-purple shadow-[0_15px_40px_-10px_rgb(116_59_255/0.8)]">
+                <svg class="h-9 w-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7" /></svg>
+              </span>
+              <h3 class="mt-8 font-display text-3xl font-bold">Message sent!</h3>
+              <p class="mt-3 max-w-sm text-muted">Thanks, <span id="cf-success-name"></span>. Your message is on its way — I'll get back to you within a day.</p>
+              <button id="cf-reset" type="button" class="mt-8 rounded-full border border-white/15 px-6 py-3 text-sm font-medium transition hover:border-white/40 hover:bg-white/5">
+                Send another message
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer class="relative overflow-hidden border-t border-line bg-ink pt-20">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+        <div class="grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
+          <!-- Brand -->
+          <div class="col-span-2 lg:col-span-1">
+            <a href="#home" class="group inline-flex items-center gap-2.5" aria-label="Anup Shakya — back to top">
+              <svg class="h-9 w-9 text-white transition duration-500 group-hover:rotate-[-12deg] group-hover:text-purple-light" viewBox="17 0 304 304" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M310 146A145.5 145.5 0 1 0 249.6 264C262 270 290 282 313 301.5Q319.5 303 318.5 294C316 255 310 215 310 146ZM164.5 74A73.5 73.5 0 1 0 164.5 221A73.5 73.5 0 1 0 164.5 74Z" />
+              </svg>
+              <span class="font-display text-2xl font-bold tracking-tight">anup<span class="text-purple-light">.</span></span>
+            </a>
+            <p class="mt-5 max-w-xs text-sm leading-relaxed text-muted">
+              Web developer crafting fast, responsive and pixel-perfect websites for brands, startups and businesses.
+            </p>
+            <p class="mt-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 py-1.5 pr-4 pl-3 text-xs text-white/80">
+              <span class="pulse-dot relative h-2 w-2 rounded-full bg-lime"></span>
+              Available for new projects
+            </p>
+          </div>
+
+          <!-- Navigate -->
+          <nav aria-label="Footer">
+            <p class="mb-5 text-xs tracking-[0.2em] text-muted uppercase">Navigate</p>
+            <ul class="space-y-3 text-sm">
+              <li><a href="#home" class="footer-link">About</a></li>
+              <li><a href="#work" class="footer-link">Work</a></li>
+              <li><a href="#services" class="footer-link">Services</a></li>
+              <li><a href="#experience" class="footer-link">Experience</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Connect -->
+          <div>
+            <p class="mb-5 text-xs tracking-[0.2em] text-muted uppercase">Connect</p>
+            <ul class="space-y-3 text-sm">
+              <li><a href="https://www.linkedin.com/in/anup-shakya-89442b80/" target="_blank" rel="noopener" class="footer-link">LinkedIn <span class="footer-arrow" aria-hidden="true">↗</span></a></li>
+              <li><a href="https://github.com/shakyaanup" target="_blank" rel="noopener" class="footer-link">GitHub <span class="footer-arrow" aria-hidden="true">↗</span></a></li>
+              <li><a href="mailto:anup.shakya60@gmail.com" class="footer-link">Email <span class="footer-arrow" aria-hidden="true">↗</span></a></li>
+              <li><a href="assets/docs/Anup-Shakya-CV.pdf" download class="footer-link">Download CV <span class="footer-arrow" aria-hidden="true">↓</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Local time + back to top -->
+          <div class="col-span-2 flex flex-row items-end justify-between gap-8 lg:col-span-1 lg:flex-col lg:items-start">
+            <div>
+              <p class="mb-5 text-xs tracking-[0.2em] text-muted uppercase">Local time</p>
+              <p class="font-display text-3xl font-semibold tabular-nums"><time id="local-time">--:--</time></p>
+              <p class="mt-1 text-sm text-muted">Portugal <span id="local-tz" class="text-white/40"></span></p>
+            </div>
+            <a
+              href="#home"
+              class="group inline-flex items-center gap-3 text-sm font-medium transition hover:text-purple-light"
+            >
+              <span class="grid h-12 w-12 place-items-center rounded-full border border-white/15 transition group-hover:border-purple group-hover:bg-purple group-hover:text-white">
+                <svg class="h-5 w-5 transition duration-500 group-hover:-translate-y-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+              </span>
+              Back to top
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Giant wordmark -->
+      <p id="footer-wordmark" class="footer-wordmark mt-20 select-none text-center font-display leading-[0.8] font-extrabold whitespace-nowrap" aria-hidden="true">anup shakya</p>
+
+      <!-- Bottom bar -->
+      <div class="relative border-t border-line">
+        <div class="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
+          <p>&copy; <span id="year"></span> Anup Shakya. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
